@@ -1,0 +1,9 @@
+.app_header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.hide {
+    display: none;
+}
