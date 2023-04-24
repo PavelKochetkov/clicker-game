@@ -1,17 +1,19 @@
 import React, { useRef } from 'react'
 import '../css/AppContent.css'
 
-export default function AppContent() {
+export default function AppContent(props) {
+
+    //Доступ к DOM- элемантам
     const game = useRef()
     const box = useRef()
     const btn = useRef()
-        
+    //Функция случайных значений   
     function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min) + min)
     }
-
+    //Функция генерирования квадратов
     const renderBox = () => {
-        const arrayColors = ['red', 'blue', 'green', 'orange', 'navy', 'purple']
+        const arrayColors = ['red', 'blue', 'green', 'orange', 'navy', 'purple', 'maroon']
         const boxSize = getRandom(30, 100)
         const gameSize = game.current.getBoundingClientRect()
         const maxTop = gameSize.height - boxSize
@@ -24,16 +26,16 @@ export default function AppContent() {
         box.current.style.left = getRandom(0, maxLeft) + 'px'
         box.current.style.cursor = 'pointer'
     }
-
+    //Функция запуска игры
     const startGame = () => {
         btn.current.style.display = 'none'
         renderBox()
+        props.startTime()
     }
-
+    //Генерирование квадратов по клику на них
     function handleBoxClick() {
        renderBox()
     }
-
     return (
         <div className='app_content'>
             <button ref={btn} onClick={startGame} className="btn">Начать</button>

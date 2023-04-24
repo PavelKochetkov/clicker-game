@@ -3,9 +3,9 @@ import { Context } from "../context"
 import '../css/AppFooter.css'
 
 export default function AppFooter () {
-    const [counter, setCounter] = useContext(Context)
+    const {counter, setCounter} = useContext(Context)
     const handleCounter = (event) => {
-        setCounter(event.target.value)
+        setCounter(parseFloat(event.target.value).toFixed(1))
     }
     return (
         <div className="app_footer">
@@ -13,7 +13,7 @@ export default function AppFooter () {
                 <label>Время игры, (сек)</label>
                 <input 
                     type="number" 
-                    min="5"
+                    min='5'
                     max='9999' 
                     value={counter}
                     onChange={handleCounter}
