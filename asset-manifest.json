@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PavelKochetkov/clicker-game/static/css/main.99f2f6ba.css",
+    "main.js": "/PavelKochetkov/clicker-game/static/js/main.799e3475.js",
+    "index.html": "/PavelKochetkov/clicker-game/index.html",
+    "main.99f2f6ba.css.map": "/PavelKochetkov/clicker-game/static/css/main.99f2f6ba.css.map",
+    "main.799e3475.js.map": "/PavelKochetkov/clicker-game/static/js/main.799e3475.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99f2f6ba.css",
+    "static/js/main.799e3475.js"
+  ]
+}
