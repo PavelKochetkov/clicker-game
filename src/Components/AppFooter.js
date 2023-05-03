@@ -3,9 +3,11 @@ import { Context } from "../context"
 import '../css/AppFooter.css'
 
 export default function AppFooter () {
-    const {counter, setCounter} = useContext(Context)
+    const {counter, setCounter, hide, result} = useContext(Context)
     const handleCounter = (event) => {
         setCounter(parseFloat(event.target.value).toFixed(1))
+        hide.current.style.display = 'block'
+        result.current.style.display = 'none'
     }
     return (
         <div className="app_footer">

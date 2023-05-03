@@ -3,18 +3,22 @@ import { Context } from "../context"
 import '../css/AppHeader.css'
 
 
-export default function AppHeader(props) {
-    const {counter, hide, time, result, startTime} = useContext(Context)
-    
+export default function AppHeader() {
+    const {counter, hide, time, result, score} = useContext(Context)
     return (
         <div className="app_header">
             <h1 id='time' ref={hide}>
                 Время игры: 
-                <span ref={time} onClick={startTime}>
+                <span ref={time}>
                     {counter}
                 </span>
             </h1>
-            <h1 className="hide" ref={result}>Ваш результат: Результат <span></span></h1>
+            <h1 className="hide" ref={result}>
+                Ваш результат: 
+                <span>
+                    {score}
+                </span>
+            </h1>
         </div>
     )
 }

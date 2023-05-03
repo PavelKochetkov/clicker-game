@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import '../css/AppContent.css'
 import { Context } from '../context'
 
-
 export default function AppContent() {
     const {startGame,handleBoxClick,game,box,btn} = useContext(Context)
     return (
