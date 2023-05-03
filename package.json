@@ -11,7 +11,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://github.com/PavelKochetkov/clicker-game",
+  "homepage": "https://pavelkochetkov.github.io/clicker-game/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
